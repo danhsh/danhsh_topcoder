@@ -1,4 +1,4 @@
-
+//SRM 144 DIV 1
 import java.util.*;
 public class Lottery {
 
