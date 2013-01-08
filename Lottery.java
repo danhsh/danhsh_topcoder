@@ -148,9 +148,9 @@ public class Lottery {
 
     Collections.sort(types);
 
-//    for(int l=0; l<types.size(); l++){
-//      System.out.println(types.get(l));
-//    }
+    for(int l=0; l<types.size(); l++){
+      System.out.println(types.get(l));
+    }
 
     String[] result = new String[rules.length];
 
@@ -172,7 +172,7 @@ public class Lottery {
         String[] rules = {"PICK ANY TWO: 10 3 F F"
                      ,"PICK TWO IN ORDER: 10 3 T F"
                      ,"PICK TWO DIFFERENT: 10 3 F T"
-                     ,"PICK TWO LIMITED: 10 3 T T"};
+                     ,"PICK TWO LIMITED: 10 4 T T"};
 
 
 
