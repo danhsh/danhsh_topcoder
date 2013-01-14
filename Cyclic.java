@@ -12,6 +12,7 @@ public class Cyclic {
 
     int amount = 0;
     boolean unique;
+
     for(int i=0; i< input.length; i++){
       unique = true;
       for(int k=0; k<i; k++){
@@ -30,23 +31,24 @@ public class Cyclic {
 
     boolean isSequential = false;
 
-      for(int k=0; k<stringB.length(); k++){
-          for(int i=0; i<stringA.length(); i++){
-            isSequential = true;
-            if(stringA.charAt(i) != stringB.charAt((k+i)%stringB.length())){
-              isSequential = false;
-              break;
-            }
-          }
-          if(isSequential){
-            return true;
-          }
+    for(int k=0; k<stringB.length(); k++){
+      for(int i=0; i<stringA.length(); i++){
+        isSequential = true;
+        if(stringA.charAt(i) != stringB.charAt((k+i) % stringB.length())){
+          isSequential = false;
+          break;
+        }
       }
+      if(isSequential){
+        return true;
+      }
+    }
     return isSequential;
   }
 
   public static void main(String[] args) {
-    String[] input =  {"the", "brown", "fox", "oxf"};
+//    String[] input =  {"the", "brown", "fox", "oxf"};
+    String[] input =  {"xoxoxoxoxoxoxoxoxo", "oxoxoxoxoxoxoxoxox"};
     Cyclic temp = new Cyclic();
     System.out.println(temp.getAmountOfCyclicRepresentation(input));
 
